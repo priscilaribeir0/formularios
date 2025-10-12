@@ -1,0 +1,452 @@
+/* ===== VARIÁVEIS DE CORES ROXO, PRETO E BRANCO ===== */
+:root {
+  /* Cores Roxo */
+  --roxo-escuro: #6A0DAD;
+  --roxo-medio: #8A2BE2;
+  --roxo-claro: #9370DB;
+  --roxo-suave: #E6E6FA;
+  
+  /* Cores Black */
+  --black-pure: #000000;
+  --black-dark: #333333;
+  --black-medium: #666666;
+  
+  /* Cores White */
+  --white-pure: #FFFFFF;
+  --white-light: #F8F8F8;
+  
+  /* Cores de uso comum */
+  --primary-color: var(--roxo-escuro);
+  --secondary-color: var(--roxo-medio);
+  --accent-color: var(--roxo-claro);
+  --background-color: var(--white-pure);
+  --surface-color: var(--white-light);
+  --text-color: var(--black-dark);
+  --text-light: var(--black-medium);
+  --border-color: #E0E0E0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-pure);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* ===== ESTILOS GERAIS PARA TODAS AS PÁGINAS ===== */
+
+/* CABEÇALHOS */
+h1, h2 {
+  color: var(--roxo-escuro);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  border-bottom: 3px solid var(--roxo-medio);
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  color: var(--roxo-escuro);
+  margin: 2rem 0 1.5rem 0;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, var(--roxo-suave), transparent);
+  border-left: 5px solid var(--roxo-medio);
+  border-radius: 0 8px 8px 0;
+}
+
+/* FORMULÁRIOS */
+form {
+  background: var(--white-pure);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+  max-width: 800px;
+  border: 2px solid var(--roxo-suave);
+}
+
+/* GRUPOS DE FORMULÁRIO */
+form > div {
+  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  background: var(--white-light);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+form > div:hover {
+  background: var(--white-pure);
+  border-color: var(--roxo-claro);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* LABELS */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--roxo-escuro);
+  font-size: 1rem;
+}
+
+/* INPUTS BÁSICOS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--white-pure);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: var(--roxo-claro);
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.2);
+}
+
+/* SELECTS */
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--white-pure);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--roxo-claro);
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.2);
+}
+
+/* TEXTAREAS */
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  background-color: var(--white-pure);
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--roxo-claro);
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.2);
+}
+
+/* CHECKBOXES E RADIO BUTTONS */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  accent-color: var(--roxo-medio);
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  background: var(--white-pure);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--roxo-medio);
+  color: var(--white-pure);
+  font-weight: 600;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: var(--roxo-suave);
+  color: var(--roxo-escuro);
+  font-weight: 600;
+  border-color: var(--roxo-medio);
+}
+
+/* BOTÕES */
+button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo-medio));
+  color: var(--white-pure);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--roxo-medio), var(--roxo-escuro));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.3);
+}
+
+button[type="reset"],
+button[type="button"] {
+  background: linear-gradient(135deg, #666, #888);
+  color: var(--white-pure);
+}
+
+button[type="reset"]:hover,
+button[type="button"]:hover {
+  background: linear-gradient(135deg, #888, #666);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA CADA PÁGINA ===== */
+
+/* CONFIGURATION PANEL (chamado.html) */
+body:has(h1:contains("Configuration Panel")) {
+  text-align: center;
+}
+
+body:has(h1:contains("Configuration Panel")) form {
+  max-width: 800px;
+}
+
+body:has(h1:contains("Configuration Panel")) textarea {
+  min-height: 120px;
+  font-family: 'Courier New', monospace;
+}
+
+/* ESCOLA VIRTUAL (escola.html) */
+body:has(h1:contains("Escola Virtual")) h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+body:has(h1:contains("Escola Virtual")) form > div:nth-child(5) {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+body:has(h1:contains("Escola Virtual")) form > div:nth-child(5) label {
+  grid-column: 1 / -1;
+}
+
+body:has(h1:contains("Escola Virtual")) form > div:nth-child(8) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+body:has(h1:contains("Escola Virtual")) form > div:nth-child(8) label:first-of-type {
+  grid-column: 1 / -1;
+  margin-bottom: 1rem;
+}
+
+/* CADASTRO (cadastro.html) */
+body:has(h2:contains("CADASTRE-SE")) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body:has(h2:contains("CADASTRE-SE")) form {
+  max-width: 600px;
+}
+
+body:has(h2:contains("CADASTRE-SE")) form > div:nth-child(11) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: end;
+}
+
+body:has(h2:contains("CADASTRE-SE")) form > div:nth-child(11) label {
+  grid-column: 1 / -1;
+}
+
+body:has(h2:contains("CADASTRE-SE")) button[type="button"] {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* CAMPOS OBRIGATÓRIOS */
+input:required + label::after,
+label:has(+ input:required)::after {
+  content: " *";
+  color: #ff4444;
+  font-weight: bold;
+}
+
+/* PADRÕES DE FORMATAÇÃO COM ÍCONES */
+input[pattern="[0-9]{3}\\.[0-9]{3}\\.[0-9]{3}-[0-9]{2}"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%236A0DAD" stroke-width="2"><path d="M16 7h.01M16 21v-4a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v4"/><rect x="2" y="3" width="20" height="18" rx="4"/><circle cx="9" cy="10" r="3"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+input[pattern="[0-9]{5}-[0-9]{3}"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%236A0DAD" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+input[pattern="dd/mm/aaaa"] {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%236A0DAD" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form > div {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  form {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  /* Ajustes específicos para mobile */
+  body:has(h1:contains("Escola Virtual")) form > div:nth-child(5),
+  body:has(h2:contains("CADASTRE-SE")) form > div:nth-child(11) {
+    grid-template-columns: 1fr;
+  }
+  
+  body:has(h1:contains("Escola Virtual")) form > div:nth-child(8) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+  
+  form {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  form > div {
+    padding: 0.8rem;
+  }
+  
+  body:has(h1:contains("Escola Virtual")) form > div:nth-child(8) {
+    grid-template-columns: 1fr;
+  }
+  
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

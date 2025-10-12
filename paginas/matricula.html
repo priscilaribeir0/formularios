@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrícula</title>
+  <link rel="stylesheet" href="../estilo/estilo.css">
+</head>
+<body>
+
+  <h1>Escola Virtual</h1>
+
+  <h2>Formulário de Pré-Matrícula</h2>
+
+  <form>
+    <h3>Dados Pessoais:</h3>
+
+    <div>
+      <label for="nome_aluno">Nome do Aluno:</label>
+      <input type="text" id="nome_aluno" name="nome_aluno">
+    </div>
+
+    <div>
+      <label for="nascimento">Nascimento (dd/mm/aaaa):</label>
+      <input type="text" id="nascimento" name="nascimento" pattern="dd/mm/aaaa">
+    </div>
+
+    <div>
+      <label for="nome_mae">Nome da Mãe:</label>
+      <input type="text" id="nome_mae" name="nome_mae">
+    </div>
+
+    <div>
+      <label for="telefone_mae">Telefone: DDD ( ) Tel:</label>
+      <input type="text" id="telefone_mae" name="telefone_mae">
+      <label for="ramal">Ramal:</label>
+      <input type="text" id="ramal" name="ramal">
+    </div>
+
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <h3>Informações de Matrícula:</h3>
+
+    <div>
+      <label for="serie">Série:</label>
+      <input type="text" id="serie" name="serie">
+    </div>
+
+    <div>
+      <label>Turno:</label>
+      <input type="radio" id="manha" name="turno" value="manha">
+      <label for="manha">Manhã</label>
+      <input type="radio" id="tarde" name="turno" value="tarde">
+      <label for="tarde">Tarde</label>
+    </div>
+
+    <div>
+      <label>Atividades Extracurriculares:</label>
+      <input type="checkbox" id="informatica" name="informatica" value="informatica">
+      <label for="informatica">Informática</label>
+      <input type="checkbox" id="musica" name="musica" value="musica">
+      <label for="musica">Música</label>
+      <input type="checkbox" id="ballet" name="ballet" value="ballet">
+      <label for="ballet">Balet</label>
+      <input type="checkbox" id="pintura" name="pintura" value="pintura">
+      <label for="pintura">Pintura</label>
+      <input type="checkbox" id="judo" name="judo" value="judo">
+      <label for="judo">Judô</label>
+      <input type="checkbox" id="futebol" name="futebol" value="futebol">
+      <label for="futebol">Futebol</label>
+    </div>
+
+    <button type="submit">Envia Formulário</button>
+    <button type="reset">Limpa Campos</button>
+  </form>
+
+</body>
+</html>

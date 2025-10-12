@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários</title>
+  <link rel="stylesheet" href="estilo/estilo.css">
+<style>
+    /* Estilos específicos para a página index */
+    .page-title {
+      text-align: center;
+      color: #8A2BE2; /* Roxo */
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      padding: 0;
+      border: none;
+      background: none;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--white-pure);
+      border-radius: 15px;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 2px solid var(--roxo-suave);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--roxo-medio), var(--roxo-escuro));
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--roxo-claro);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      color: var(--roxo-escuro);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .card h2 {
+      color: var(--roxo-escuro);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border: none;
+      padding: 0;
+    }
+
+    .card p {
+      color: var(--text-color);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo-medio));
+      color: var(--white-pure);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .card-btn:hover {
+      background: var(--white-pure);
+      color: var(--roxo-escuro);
+      border-color: var(--roxo-escuro);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(231, 12, 104, 0.3);
+    }
+
+    .features {
+      background: var(--white-light);
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .features h2 {
+      color: var(--roxo-escuro);
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-item {
+      padding: 2rem;
+      background: var(--white-pure);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--roxo-medio);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .feature-item h3 {
+      color: var(--roxo-escuro);
+      margin-bottom: 1rem;
+      border: none;
+      padding: 0;
+      background: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      color: var(--text-color);
+      border-top: 2px solid var(--roxo-suave);
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2.2rem;
+      }
+      
+      .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .card {
+        padding: 2rem;
+      }
+      
+      .features {
+        padding: 2rem 1rem;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+      
+      .card-icon {
+        font-size: 2.5rem;
+      }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="page-title">Formulários</h1>
+    <h2>Tarefa de Programação Web I</h2>
+  </header>
+
+  <div class="cards-container">
+    <!-- Card Painel-->
+    <div class="card">
+      <img src="imagens/painel.png" width="150px" height="150px">
+      <h2>HTML/CSS</h2>
+      <p>Painel de configuração para gerar código HTML/CSS personalizado.</p>
+      <a href="paginas/painel.html" class="card-btn">Acessar Painel</a>
+    </div>
+
+    <!-- Card Escola Virtual -->
+    <div class="card">
+      <img src="imagens/escola.jpg" width="150px" height="150px">
+      <h2>Escola Virtual</h2>
+      <p>Formulário de pré-matrícula para instituições educacionais.</p>
+      <a href="paginas/matricula.html" class="card-btn">Fazer Matrícula</a>
+    </div>
+
+    <!-- Card Cadastro -->
+    <div class="card">
+      <img src="imagens/cadastro.png" width="150px" height="150px">
+      <h2>Cadastro de Usuário</h2>
+      <p>Sistema completo de cadastro com dados pessoais, contato e endereço.</p>
+      <a href="paginas/cadastro.html" class="card-btn">Criar Cadastro</a>
+    </div>
+  </div>
+
+</body>
+</html>

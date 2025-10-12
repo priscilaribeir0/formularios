@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Painel</title>
+  <link rel="stylesheet" href="../estilo/estilo.css">
+</head>
+<body>
+
+  <h1>Painel HTML/CSS</h1>
+
+  <form>
+    <div>
+      <label for="destino">Destino:</label>
+      <select id="destino" name="destino">
+        <option value="chamado">Chamado</option>
+
+      </select>
+    </div>
+
+    <div>
+      <label for="classificacao">Classificação anexo *:</label>
+      <select id="classificacao" name="classificacao">
+        <option value="documento de análise">Documento de análise</option>
+
+      </select>
+    </div>
+
+    <div>
+      <label>Privado:</label>
+      <input type="checkbox" id="privado" name="privado">
+    </div>
+
+    <div>
+      <label for="posicao_vertical">Posição vertical:</label>
+      <select id="posicao_vertical" name="posicao_vertical">
+        <option value="centro">Centro</option>
+
+      </select>
+    </div>
+
+    <div>
+      <label for="posicao_horizontal">Posição horizontal:</label>
+      <select id="posicao_horizontal" name="posicao_horizontal">
+        <option value="centro">Centro</option>
+
+      </select>
+    </div>
+
+    <div>
+      <label for="largura">Largura:</label>
+      <input type="text" id="largura" name="largura">
+    </div>
+
+    <div>
+      <label for="altura">Altura:</label>
+      <input type="text" id="altura" name="altura">
+    </div>
+
+    <div>
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo">
+    </div>
+
+    <h3>HTML Header:</h3>
+    <textarea id="html_header" name="html_header" rows="4" cols="50"></textarea>
+
+    <h3>CSS:</h3>
+    <textarea id="css" name="css" rows="4" cols="50"></textarea>
+
+    <h3>HTML Body:</h3>
+    <textarea id="html_body" name="html_body" rows="4" cols="50"></textarea>
+
+    <button type="submit">Gerar código</button>
+  </form>
+
+</body>
+</html>
